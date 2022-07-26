@@ -12,8 +12,8 @@
 
     <title>RJ-TableVisualizer</title>
   </head>
-  <body class="bg-dark">
-    <nav class="navbar navbar-dark fs-2" style="background-color: #000;">
+  <body>
+    <nav class="navbar navbar-dark fs-2" style="background-color: #000">
       <div class="container-fluid">
         <a class="navbar-brand fs-1 fw-bolder">RJ-TableVisualizer</a>
         <form class="d-flex">
@@ -34,8 +34,11 @@
         </form>
       </div>
     </nav>
-    <div class="container" style="min-height: 80vh">
-      <div class="container my-5" style="height: 50vh">
+    <div
+      class="container d-flex flex-column justify-content-center"
+      style="min-height: 80vh"
+    >
+      <div class="container my-5" style="height: 70vh">
         <!-- <form method="post" class="border p-3 rounded-3 d-flex flex-column justify-content-around fs-5" style="height: 100%;"> -->
         <form
           name="tablesrc"
@@ -94,7 +97,8 @@
               <select
                 name="digtype"
                 id="digtype"
-                style="height: 2.5rem; width: 30%"
+                class="col-4"
+                style="height: 2.5rem"
               >
                 <option value="Pie Chart">Pie Chart</option>
                 <option value="Bar Chart">Bar Chart</option>
@@ -113,7 +117,7 @@
         </form>
       </div>
     </div>
-    <footer class="text-center m-0" style="opacity: 1;">
+    <footer class="text-center m-0" style="opacity: 1">
       <p class="py-3 text-light fw-bold fs-4">
         Copyright&copy; RJ-TableVisualizer 2022.
       </p>
@@ -125,12 +129,21 @@
     ></script>
   </body>
   <style>
-    body{
-      background: url('/bg.gif') no-repeat;
-      background-size: cover;
+    body {
+      background-color: #000;
     }
-    nav a{
-      font-family: 'Algerian';
+    body::before {
+      content: "";
+      background: url("/bg.gif") no-repeat center;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+    nav a {
+      font-family: "Algerian";
     }
   </style>
 </html>
