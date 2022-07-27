@@ -1,5 +1,7 @@
 # Capstone Project
 
+#### [Click to see the current state of website](https://mrz004.github.io/Capstone_Project/)
+
 ###### Capstone Project of Diploma Third Year.
 >This is a simple project which extracts all the tables from a website and show them in  a diagrammatically manner
 >That is it generate different types of charts and graph on the data provided by that table.
@@ -21,7 +23,7 @@
 
 ###### ToDo's
 - [x] Build the initial home page with navbar, footer, and form
-- [ ] Build backend logic to extract all the tables in from supplied URL
+- [x] Build backend logic to extract all the tables in from supplied URL
 - [ ] Build backend logic to check if the table extracted containce representable data
 - [ ] Build backend logic to save the digrame generated in the form of a image
 - [ ] Build backend logic to generate a HTML document the generated image in it
