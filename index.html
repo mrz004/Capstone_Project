@@ -16,22 +16,24 @@
     <nav class="navbar navbar-dark fs-2" style="background-color: #000">
       <div class="container-fluid">
         <a class="navbar-brand fs-1 fw-bolder">RJ-TableVisualizer</a>
-        <form class="d-flex">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-            size="45"
-          />
-          <button
-            class="btn btn-outline-success"
-            type="submit"
-            style="width: 10rem"
-          >
-            Search
-          </button>
-        </form>
+        <span id="searchForm">
+          <form name="search" class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              size="45"
+            />
+            <button
+              class="btn btn-outline-success"
+              type="submit"
+              style="width: 10rem"
+            >
+              Search
+            </button>
+          </form>
+        </span>
       </div>
     </nav>
     <div
@@ -127,23 +129,12 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1035px)"
+      href="responsive.css"
+    />
   </body>
-  <style>
-    body {
-      background-color: #000;
-    }
-    body::before {
-      content: "";
-      background: url("/bg.gif") no-repeat center;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-    }
-    nav a {
-      font-family: "Algerian";
-    }
-  </style>
 </html>

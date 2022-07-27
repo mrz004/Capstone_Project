@@ -1,0 +1,17 @@
+*{
+    /* background-color: red; */
+}
+
+#searchForm{
+    display: none;
+}
+
+#searchForm::before{
+    content: "<div class='ham'></div><div class='ham'></div><div class='ham'></div>";
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid white;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

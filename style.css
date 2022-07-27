@@ -1,0 +1,16 @@
+body {
+  background-color: #000;
+}
+body::before {
+  content: "";
+  background: url("bg.gif") no-repeat center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+nav a {
+  font-family: "Algerian";
+}
