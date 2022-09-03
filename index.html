@@ -9,13 +9,23 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-
     <title>RJ-TableVisualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="navbar navbar-dark fs-2" style="background-color: #000">
       <div class="container-fluid">
         <a class="navbar-brand fs-1 fw-bolder">RJ-TableVisualizer</a>
+        <span id="hambug">
+          <div class="hams"></div>
+          <div class="hams"></div>
+          <div class="hams"></div>
+        </span>
         <span id="searchForm">
           <form name="search" class="d-flex">
             <input
@@ -29,6 +39,7 @@
               class="btn btn-outline-success"
               type="submit"
               style="width: 10rem"
+              disabled="true"
             >
               Search
             </button>
@@ -42,13 +53,24 @@
     >
       <div class="container my-5" style="height: 70vh">
         <!-- <form method="post" class="border p-3 rounded-3 d-flex flex-column justify-content-around fs-5" style="height: 100%;"> -->
+          <ul class="nav nav-pills justify-content-evenly">
+            <li class="nav-item">
+              <a class="nav-link active" id="tableDirectData">Direct Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tableURL">URL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tableFile">File Upload</a>
+            </li>
+          </ul>
         <form
           name="tablesrc"
           method="get"
           class="p-3 d-flex flex-column text-light justify-content-around fs-5"
           style="height: 100%"
         >
-          <div class="row mb-3">
+          <div id="ulrinput" class="row mb-3">
             <label for="inputEmail3" class="col-sm-2 col-form-label">URL</label>
             <div class="col-sm-10">
               <input
@@ -60,8 +82,7 @@
               />
             </div>
           </div>
-          <div class="row mb-3 d-flex justify-content-center">OR</div>
-          <div class="row mb-3">
+          <div id="fileupload" class="row mb-3">
             <label for="file" class="col-sm-2 col-form-label"
               >Select file</label
             >
@@ -111,6 +132,7 @@
           <div class="d-grid col-5 mx-auto">
             <button
               type="submit"
+              id="genDigBtn"
               class="btn btn-primary rounded-pill py-3 m-2 fw-bolder fs-5"
             >
               Generate Diagram
